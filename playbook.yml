@@ -4,4 +4,11 @@
   tasks:
    - copy:
         content: "hello world"
-        dest: /tmp/abc.txt
+        dest: /tmp/abc2.txt
+     notify: restart  http
+
+  handlers:
+   - name: restart  http
+     service:
+        name: httpd
+        state: restarted
