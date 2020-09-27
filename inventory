@@ -1,4 +1,3 @@
 #192.168.0.2
 #192.168.0.3
-servera ansible_user=test ansible_ssh_pass=test
-
+servera ansible_user=test  ansible_ssh_pass=test

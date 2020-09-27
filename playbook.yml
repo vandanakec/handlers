@@ -2,13 +2,19 @@
 - hosts: all
   become: true
   tasks:
-   - copy:
-        content: "hello world"
-        dest: /tmp/abc2.txt
-     notify: restart  http
+    - copy:
+        content: "hello"
+        dest: /tmp/dhfdjsjhghdjk.txt
+      notify: restart http
+
+
 
   handlers:
-   - name: restart  http
-     service:
-        name: httpd
-        state: restarted
+     - name: restart http
+       service: 
+           name: haproxy
+           state:  restarted
+         
+
+
+
